@@ -21,5 +21,9 @@
   "license": "BSD-2-Clause",
   "bugs": {
     "url": "https://github.com/Alex-ray/Deputy/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.18.2",
+    "chai": "~1.9.1"
   }
 }
