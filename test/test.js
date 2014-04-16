@@ -1,7 +1,7 @@
 var should = require( 'chai' ).should( ) ;
-var Defer  = require( '../deferred' ).Defer ;
+var Deputy  = require( '../index' ).Deputy ;
 
-describe( 'Defer', function ( ) {
+describe( 'Deputy', function ( ) {
 
   function obj ( ) {
     this.cb ;
@@ -15,7 +15,7 @@ describe( 'Defer', function ( ) {
   var obj   = new obj( ) ;
 
   describe( 'initialization', function ( ) {
-    var newDefer = new Defer( ) ;
+    var newDefer = new Deputy( ) ;
 
     it ( 'should have trigger function', function ( ) {
       newDefer.should.have.property( 'trigger' ).be.a( 'function' ) ;
@@ -32,7 +32,7 @@ describe( 'Defer', function ( ) {
   }) ;
 
   describe( 'defer', function ( ) {
-      var defer = new Defer( ) ;
+      var defer = new Deputy( ) ;
 
     it ( 'should add function to deferred array', function ( ) {
       defer.defer( obj.getFoo ) ;
@@ -45,7 +45,7 @@ describe( 'Defer', function ( ) {
   describe( 'trigger', function( ) {
 
     it ( 'should trigger deferred functions with context', function ( done ) {
-      var defer = new Defer( ) ;
+      var defer = new Deputy( ) ;
       obj.cb = function ( foo ) {
         foo.should.be.a( 'string' ).equal( 'bar' ) ;
         done( ) ;
@@ -56,7 +56,7 @@ describe( 'Defer', function ( ) {
     }) ;
 
     it ( 'should trigger deferred in seperate context', function ( done ) {
-      var defer = new Defer( ) ;
+      var defer = new Deputy( ) ;
       var newContext = { } ;
       newContext.foo = 'foobar' ;
 
