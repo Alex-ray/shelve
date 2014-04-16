@@ -1,3 +1,3 @@
 ## Deputy JS
 
-# A simple and light-weight async javascript deferrer
+A simple and light-weight async javascript deferrer
