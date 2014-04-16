@@ -4,14 +4,14 @@
   // Async function execution for client side and server side
   var next = (typeof process === 'undefined' || typeof process.nextTick === 'undefined' ) ? function (fn) { setTimeout(fn, 0); } : process.nextTick ;
 
-  function Deputy ( ) {
+  function Shelve ( ) {
       this.context ;
       this.deferred = [ ] ;
 
       return this ;
   }
 
-  Deputy.prototype.defer = function defer ( fn ) {
+  Shelve.prototype.defer = function defer ( fn ) {
 
     // Check if deferreds have been triggered
     if ( this.context !== undefined ) {
@@ -25,7 +25,7 @@
 
   }
 
-  Deputy.prototype.trigger = function trigger ( context ) {
+  Shelve.prototype.trigger = function trigger ( context ) {
 
     this.context = context === undefined ? this : context ;
     var context = this.context ;
@@ -40,6 +40,6 @@
   }
 
 
-  global.Deputy = Deputy ;
+  global.Shelve = Shelve ;
 
 }( typeof exports === 'undefined' ? window : exports ) ) ;
