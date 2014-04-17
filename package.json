@@ -1,6 +1,6 @@
 {
   "name": "Shelve",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "A simple and light-weight async javascript deferrer",
   "main": "index.js",
   "scripts": {
