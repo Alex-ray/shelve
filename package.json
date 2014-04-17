@@ -22,9 +22,9 @@
     {
       "name": "Alexander James Ray",
       "email": "alexjamesray@gmail.com",
-      "url" : "http://alexray.me"
+      "url": "http://alexray.me"
     }
-  ]
+  ],
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Alex-ray/shelve/issues"
@@ -32,5 +32,8 @@
   "devDependencies": {
     "mocha": "~1.18.2",
     "chai": "~1.9.1"
+  },
+   "engines": {
+    "node": ">=0.6"
   }
 }
