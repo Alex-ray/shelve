@@ -18,6 +18,13 @@
     "event"
   ],
   "author": "Alexander James Ray < alexjamesray@gmail.com >",
+  "contributors": [
+    {
+      "name": "Alexander James Ray",
+      "email": "alexjamesray@gmail.com",
+      "url" : "http://alexray.me"
+    }
+  ]
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Alex-ray/shelve/issues"
