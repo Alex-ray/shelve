@@ -1,0 +1,138 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '.', '-g' ]
+2 info using npm@1.3.8
+3 info using node@v0.10.18
+4 verbose cache add [ '.', null ]
+5 verbose cache add name=undefined spec="." args=[".",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: '.',
+6 verbose parsed url   path: '.',
+6 verbose parsed url   href: '.' }
+7 silly lockFile 3a52ce78- .
+8 verbose lock . /Users/alex/.npm/3a52ce78-.lock
+9 verbose tar pack [ '/var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/tmp.tgz',
+9 verbose tar pack   '.' ]
+10 verbose tarball /var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/tmp.tgz
+11 verbose folder .
+12 silly lockFile 1f1177db-tar tar://.
+13 verbose lock tar://. /Users/alex/.npm/1f1177db-tar.lock
+14 silly lockFile 9320137c-31690-0-7007846157066524-tmp-tgz tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/tmp.tgz
+15 verbose lock tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/tmp.tgz /Users/alex/.npm/9320137c-31690-0-7007846157066524-tmp-tgz.lock
+16 silly lockFile 1f1177db-tar tar://.
+17 silly lockFile 1f1177db-tar tar://.
+18 silly lockFile 9320137c-31690-0-7007846157066524-tmp-tgz tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/tmp.tgz
+19 silly lockFile 9320137c-31690-0-7007846157066524-tmp-tgz tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/tmp.tgz
+20 verbose tar unpack /var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/tmp.tgz
+21 silly lockFile 96027a68-31690-0-7007846157066524-package tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/package
+22 verbose lock tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/package /Users/alex/.npm/96027a68-31690-0-7007846157066524-package.lock
+23 silly lockFile 9320137c-31690-0-7007846157066524-tmp-tgz tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/tmp.tgz
+24 verbose lock tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/tmp.tgz /Users/alex/.npm/9320137c-31690-0-7007846157066524-tmp-tgz.lock
+25 silly gunzTarPerm modes [ '755', '644' ]
+26 silly gunzTarPerm extractEntry package.json
+27 silly gunzTarPerm extractEntry .npmignore
+28 silly gunzTarPerm extractEntry README.md
+29 silly gunzTarPerm extractEntry index.js
+30 silly gunzTarPerm extractEntry test/test.js
+31 silly lockFile 96027a68-31690-0-7007846157066524-package tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/package
+32 silly lockFile 96027a68-31690-0-7007846157066524-package tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/package
+33 silly lockFile 9320137c-31690-0-7007846157066524-tmp-tgz tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/tmp.tgz
+34 silly lockFile 9320137c-31690-0-7007846157066524-tmp-tgz tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/tmp.tgz
+35 verbose tar pack [ '/Users/alex/.npm/Shelve/1.0.0/package.tgz',
+35 verbose tar pack   '/var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/package' ]
+36 verbose tarball /Users/alex/.npm/Shelve/1.0.0/package.tgz
+37 verbose folder /var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/package
+38 silly lockFile 96027a68-31690-0-7007846157066524-package tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/package
+39 verbose lock tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/package /Users/alex/.npm/96027a68-31690-0-7007846157066524-package.lock
+40 silly lockFile a5b0fba5-lex-npm-Shelve-1-0-0-package-tgz tar:///Users/alex/.npm/Shelve/1.0.0/package.tgz
+41 verbose lock tar:///Users/alex/.npm/Shelve/1.0.0/package.tgz /Users/alex/.npm/a5b0fba5-lex-npm-Shelve-1-0-0-package-tgz.lock
+42 silly lockFile 96027a68-31690-0-7007846157066524-package tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/package
+43 silly lockFile 96027a68-31690-0-7007846157066524-package tar:///var/folders/hx/71shphxx5hs8ntqh04g_x1ph0000gn/T/npm-25103-bATuNUJp/1397693231690-0.7007846157066524/package
+44 silly lockFile a5b0fba5-lex-npm-Shelve-1-0-0-package-tgz tar:///Users/alex/.npm/Shelve/1.0.0/package.tgz
+45 silly lockFile a5b0fba5-lex-npm-Shelve-1-0-0-package-tgz tar:///Users/alex/.npm/Shelve/1.0.0/package.tgz
+46 silly lockFile 81683ab1-rs-alex-npm-Shelve-1-0-0-package /Users/alex/.npm/Shelve/1.0.0/package
+47 verbose lock /Users/alex/.npm/Shelve/1.0.0/package /Users/alex/.npm/81683ab1-rs-alex-npm-Shelve-1-0-0-package.lock
+48 silly lockFile 81683ab1-rs-alex-npm-Shelve-1-0-0-package /Users/alex/.npm/Shelve/1.0.0/package
+49 silly lockFile 81683ab1-rs-alex-npm-Shelve-1-0-0-package /Users/alex/.npm/Shelve/1.0.0/package
+50 verbose tar unpack /Users/alex/.npm/Shelve/1.0.0/package.tgz
+51 silly lockFile 89268b30-rs-alex-npm-Shelve-1-0-0-package tar:///Users/alex/.npm/Shelve/1.0.0/package
+52 verbose lock tar:///Users/alex/.npm/Shelve/1.0.0/package /Users/alex/.npm/89268b30-rs-alex-npm-Shelve-1-0-0-package.lock
+53 silly lockFile a5b0fba5-lex-npm-Shelve-1-0-0-package-tgz tar:///Users/alex/.npm/Shelve/1.0.0/package.tgz
+54 verbose lock tar:///Users/alex/.npm/Shelve/1.0.0/package.tgz /Users/alex/.npm/a5b0fba5-lex-npm-Shelve-1-0-0-package-tgz.lock
+55 silly gunzTarPerm modes [ '755', '644' ]
+56 silly gunzTarPerm extractEntry package.json
+57 silly gunzTarPerm extractEntry .npmignore
+58 silly gunzTarPerm extractEntry README.md
+59 silly gunzTarPerm extractEntry index.js
+60 silly gunzTarPerm extractEntry test/test.js
+61 silly lockFile 89268b30-rs-alex-npm-Shelve-1-0-0-package tar:///Users/alex/.npm/Shelve/1.0.0/package
+62 silly lockFile 89268b30-rs-alex-npm-Shelve-1-0-0-package tar:///Users/alex/.npm/Shelve/1.0.0/package
+63 silly lockFile a5b0fba5-lex-npm-Shelve-1-0-0-package-tgz tar:///Users/alex/.npm/Shelve/1.0.0/package.tgz
+64 silly lockFile a5b0fba5-lex-npm-Shelve-1-0-0-package-tgz tar:///Users/alex/.npm/Shelve/1.0.0/package.tgz
+65 verbose chmod /Users/alex/.npm/Shelve/1.0.0/package.tgz 644
+66 verbose chown /Users/alex/.npm/Shelve/1.0.0/package.tgz [ 501, 20 ]
+67 silly lockFile 3a52ce78- .
+68 silly lockFile 3a52ce78- .
+69 silly resolved [ { name: 'Shelve',
+69 silly resolved     version: '1.0.0',
+69 silly resolved     description: 'A simple and light-weight async javascript deferrer',
+69 silly resolved     main: 'index.js',
+69 silly resolved     scripts: { test: 'mocha' },
+69 silly resolved     repository: { type: 'git', url: 'git://github.com/Alex-ray/Shelve.git' },
+69 silly resolved     keywords: [ 'deferred', 'defer', 'shelve', 'shelvejs', 'event' ],
+69 silly resolved     author:
+69 silly resolved      { name: 'Alexander James Ray',
+69 silly resolved        email: ' alexjamesray@gmail.com ' },
+69 silly resolved     license: 'MIT',
+69 silly resolved     bugs: { url: 'https://github.com/Alex-ray/Shelve/issues' },
+69 silly resolved     devDependencies: { mocha: '~1.18.2', chai: '~1.9.1' },
+69 silly resolved     readme: '## Shelve JS\n\nA simple and light-weight async javascript deferrer\n',
+69 silly resolved     readmeFilename: 'README.md',
+69 silly resolved     _id: 'Shelve@1.0.0',
+69 silly resolved     dist: { shasum: '156c000f2eb462236c3f6c92beb4eaf17c6a741d' },
+69 silly resolved     _from: '.' } ]
+70 info install Shelve@1.0.0 into /usr/local/lib
+71 info installOne Shelve@1.0.0
+72 info /usr/local/lib/node_modules/Shelve unbuild
+73 verbose tar unpack /Users/alex/.npm/Shelve/1.0.0/package.tgz
+74 silly lockFile 5b6c9033-sr-local-lib-node-modules-Shelve tar:///usr/local/lib/node_modules/Shelve
+75 verbose lock tar:///usr/local/lib/node_modules/Shelve /Users/alex/.npm/5b6c9033-sr-local-lib-node-modules-Shelve.lock
+76 silly lockFile a5b0fba5-lex-npm-Shelve-1-0-0-package-tgz tar:///Users/alex/.npm/Shelve/1.0.0/package.tgz
+77 verbose lock tar:///Users/alex/.npm/Shelve/1.0.0/package.tgz /Users/alex/.npm/a5b0fba5-lex-npm-Shelve-1-0-0-package-tgz.lock
+78 silly gunzTarPerm modes [ '755', '644' ]
+79 error Error: EACCES, mkdir '/usr/local/lib/node_modules/Shelve'
+79 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/Shelve']
+79 error   errno: 3,
+79 error   code: 'EACCES',
+79 error   path: '/usr/local/lib/node_modules/Shelve',
+79 error   fstream_type: 'Directory',
+79 error   fstream_path: '/usr/local/lib/node_modules/Shelve',
+79 error   fstream_class: 'DirWriter',
+79 error   fstream_stack:
+79 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+79 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53',
+79 error      'Object.oncomplete (fs.js:107:15)' ] }
+80 error Please try running this command again as root/Administrator.
+81 error System Darwin 13.1.0
+82 error command "node" "/usr/local/bin/npm" "install" "." "-g"
+83 error cwd /Users/alex/Projects/Shelve
+84 error node -v v0.10.18
+85 error npm -v 1.3.8
+86 error path /usr/local/lib/node_modules/Shelve
+87 error fstream_path /usr/local/lib/node_modules/Shelve
+88 error fstream_type Directory
+89 error fstream_class DirWriter
+90 error code EACCES
+91 error errno 3
+92 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/Shelve'
+93 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+93 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:37:53
+93 error fstream_stack Object.oncomplete (fs.js:107:15)
+94 verbose exit [ 3, true ]

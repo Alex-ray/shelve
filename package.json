@@ -1,5 +1,5 @@
 {
-  "name": "Shelve",
+  "name": "shelve",
   "version": "1.0.0",
   "description": "A simple and light-weight async javascript deferrer",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/Alex-ray/Shelve.git"
+    "url": "git://github.com/Alex-ray/shelve.git"
   },
   "keywords": [
     "deferred",
@@ -20,7 +20,7 @@
   "author": "Alexander James Ray < alexjamesray@gmail.com >",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Alex-ray/Shelve/issues"
+    "url": "https://github.com/Alex-ray/shelve/issues"
   },
   "devDependencies": {
     "mocha": "~1.18.2",
