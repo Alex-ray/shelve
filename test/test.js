@@ -71,13 +71,13 @@ describe( 'Shelve', function ( ) {
 
     it ( 'should return execution to inner loop and add unexecuted event back to event queue.', function ( done ) {
       var defer = new Shelve( ) ;
-      var max = 100000 ;
+      var max = 1000000 ;
       for ( var i = 0; i <= max; i++ ) {
         var fn = genFunc( i, max ) ;
         defer.defer( fn ) ;
       }
 
-      defer.trigger(  ) ;
+      defer.trigger( ) ;
 
       function genFunc ( num, max ) {
         return function ( ) {
