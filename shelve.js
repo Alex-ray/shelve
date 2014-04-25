@@ -35,20 +35,16 @@
 
   Shelve.prototype.trigger = function trigger ( context ) {
     var self      = this ;
-    var emit      = genEmit( self ) ;
     self.context  = context === undefined ? self : context ;
     next( emit ) ;
 
-    function genEmit ( self ) {
-      return function ( ) {
+    function emit ( ) {
+      for ( var i = 0; i < self.deferred.length; i++ ) {
+        var fn = self.deferred[ i ] ;
+        fn.call( self.context ) ;
+      }
 
-        for ( var i = 0; i < self.deferred.length; i++ ) {
-          var fn = self.deferred[ i ] ;
-          fn.call( self.context ) ;
-        }
-
-        self.deferred = [ ] ;
-      } ;
+      self.deferred = [ ] ;
     }
 
   }
