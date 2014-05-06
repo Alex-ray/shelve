@@ -31,8 +31,8 @@
     "url": "https://github.com/Alex-ray/shelve/issues"
   },
   "devDependencies": {
-    "mocha": "~1.18.2",
-    "chai": "~1.9.1"
+    "mocha": "*",
+    "chai": "*"
   },
    "engines": {
     "node": ">=0.6"
