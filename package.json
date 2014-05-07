@@ -1,6 +1,6 @@
 {
   "name": "shelve",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A simple and light-weight async javascript deferrer",
   "repository": {
     "type": "git",
