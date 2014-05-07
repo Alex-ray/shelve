@@ -19,6 +19,12 @@
       return this ;
   }
 
+  /**
+   * add `fn` to deferred queue if shelve has not been triggered otherwise trigger it
+   * @param {Function} fn
+   * @return instance
+   * @api public
+   */
   Shelve.prototype.defer = function defer ( fn ) {
 
     // Check if deferreds have been triggered
@@ -30,10 +36,16 @@
       this.deferred.push( fn ) ;
     }
 
-
   }
 
+  /**
+   * trigger all deferred callbacks and bind them to `context` otherwise bind to instance context
+   * @param {Object} context
+   * @return instance
+   * @api public
+   */
   Shelve.prototype.trigger = function trigger ( context ) {
+
     var self      = this ;
     self.context  = context === undefined ? self : context ;
     next( emit ) ;
