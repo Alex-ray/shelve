@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git://github.com/Alex-ray/shelve.git"
   },
-  "main": "index.js",
+  "main": "shelve.js",
   "scripts": {
     "test": "mocha"
   },
