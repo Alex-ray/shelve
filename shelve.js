@@ -14,7 +14,8 @@
 
   function Shelve ( ) {
       this.context ;
-      this.deferred  = [ ] ;
+      this.deferred = [ ] ;
+      this.maxTime  = 50 ;
 
       return this ;
   }
@@ -36,7 +37,7 @@
       this.deferred.push( fn ) ;
     }
 
-  }
+  } ;
 
   /**
    * trigger all deferred callbacks and bind them to `context` otherwise bind to instance context
@@ -51,9 +52,20 @@
     next( emit ) ;
 
     function emit ( ) {
+      var startMs = Date.now( ) ;
+
       for ( var i = 0; i < self.deferred.length; i++ ) {
         var fn = self.deferred[ i ] ;
         fn.call( self.context ) ;
+        var eventMs = Date.now( ) - startMs ;
+
+        if ( eventMs > self.maxTime ) {
+          self.deferred = self.deferred.slice( i, self.deferred.length ) ;
+          self.trigger( self.context ) ;
+          return ;
+        }
+
+
       }
 
       self.deferred = [ ] ;
@@ -64,4 +76,4 @@
 
   global.Shelve = Shelve ;
 
-}( typeof exports === 'undefined' ? window : exports ) ) ;
+}( typeof window === "undefined" ? this : window ) ) ;
