@@ -13,66 +13,61 @@
   }
 
   function Shelve ( ) {
-      this.context ;
-      this.deferred = [ ] ;
-      this.maxTime  = 50 ;
+    var timer ;
+    var self = { } ;
 
-      return this ;
-  }
+    self.triggered =  false ;
+    self._deferred = [ ] ;
+    self.maxTime   = 50 ;
+    self.defer     = defer ;
 
-  /**
-   * add `fn` to deferred queue if shelve has not been triggered otherwise trigger it
-   * @param {Function} fn
-   * @return instance
-   * @api public
-   */
-  Shelve.prototype.defer = function defer ( fn ) {
+    return self ;
 
-    // Check if deferreds have been triggered
-    if ( this.context !== undefined ) {
-      next( fn.bind( this.context ) ) ;
-    }
+    /**
+     * add `fn` to deferred queue if shelve has not been triggered otherwise trigger it
+     * @param {Function} fn
+     * @return instance
+     * @api public
+     */
+    function defer ( fn ) {
 
-    else {
-      this.deferred.push( fn ) ;
-    }
+      if ( typeof fn === "function" ) self._deferred.push( fn ) ;
 
-  } ;
+      if ( timer === undefined ) timer = next( deferredWorker ) ;
 
-  /**
-   * trigger all deferred callbacks and bind them to `context` otherwise bind to instance context
-   * @param {Object} context
-   * @return instance
-   * @api public
-   */
-  Shelve.prototype.trigger = function trigger ( context ) {
+    } ;
 
-    var self      = this ;
-    self.context  = context === undefined ? self : context ;
-    next( emit ) ;
+    /**
+     * Triggers all functions in deferred queue releasing from event loop when needed
+     * @api public
+     */
 
-    function emit ( ) {
+    function deferredWorker ( ) {
+      timer = undefined ;
       var startMs = Date.now( ) ;
 
-      for ( var i = 0; i < self.deferred.length; i++ ) {
-        var fn = self.deferred[ i ] ;
-        fn.call( self.context ) ;
+      for ( var i = 0; i < self._deferred.length; i++ ) {
+
+        var fn      = self._deferred[ i ] ;
         var eventMs = Date.now( ) - startMs ;
 
+        fn( ) ;
+
         if ( eventMs > self.maxTime ) {
-          self.deferred = self.deferred.slice( i, self.deferred.length ) ;
-          self.trigger( self.context ) ;
+
+          self._deferred = self._deferred.slice( i, self._deferred.length ) ;
+          defer( ) ;
           return ;
+
         }
 
 
       }
 
-      self.deferred = [ ] ;
+      self._deferred = [ ] ;
     }
 
   }
-
 
   global.Shelve = Shelve ;
 
