@@ -5,7 +5,7 @@
   var next ;
 
   if ( typeof process === 'undefined' || typeof process.nextTick === 'undefined' ) {
-    next = function (fn) { setTimeout(fn, 0); }  ;
+    next = function (fn) { return setTimeout(fn, 0); }  ;
   }
 
   else {
@@ -13,13 +13,13 @@
   }
 
   function Shelve ( ) {
-    var timer ;
+    var fTimer ;
     var self = { } ;
 
-    self.triggered =  false ;
-    self._deferred = [ ] ;
-    self.maxTime   = 50 ;
-    self.defer     = defer ;
+    var fDeferred = [ ] ;
+    var fMaxTime  = 50 ;
+
+    self.defer = defer ;
 
     return self ;
 
@@ -31,9 +31,12 @@
      */
     function defer ( fn ) {
 
-      if ( typeof fn === "function" ) self._deferred.push( fn ) ;
+      if ( typeof fn !== "function" ) return false;
 
-      if ( timer === undefined ) timer = next( deferredWorker ) ;
+      fDeferred.push( fn ) ;
+      _schedual( ) ;
+
+      return true ;
 
     } ;
 
@@ -41,22 +44,17 @@
      * Triggers all functions in deferred queue releasing from event loop when needed
      * @api public
      */
+    function _deferredWorker ( ) {
+      fTimer = undefined ;
+      var endMs = Date.now( ) + fMaxTime;
 
-    function deferredWorker ( ) {
-      timer = undefined ;
-      var startMs = Date.now( ) ;
+      for ( var i = 0; i < fDeferred.length; i++ ) {
+        fDeferred[ i ]( ) ;
 
-      for ( var i = 0; i < self._deferred.length; i++ ) {
+        if ( Date.now( ) >= endMs ) {
 
-        var fn      = self._deferred[ i ] ;
-        var eventMs = Date.now( ) - startMs ;
-
-        fn( ) ;
-
-        if ( eventMs > self.maxTime ) {
-
-          self._deferred = self._deferred.slice( i, self._deferred.length ) ;
-          defer( ) ;
+          fDeferred = fDeferred.slice( i, fDeferred.length ) ;
+          _schedual( ) ;
           return ;
 
         }
@@ -64,7 +62,12 @@
 
       }
 
-      self._deferred = [ ] ;
+      fDeferred = [ ] ;
+    }
+
+    // PRIVATE
+    function _schedual ( ) {
+      if ( fTimer === undefined ) fTimer = next( _deferredWorker ) ;
     }
 
   }
